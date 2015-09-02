@@ -102,11 +102,8 @@ namespace JustCCP_part_1_view
                 for (int i = 0; i < filelist.Count; i++)
                 {
                     sourceFile = filelist[i];
-                    //MessageBox.Show("Source Path = "+sourceFile);
                     fileName = copy.extractFileName(sourceFile);
-                    //MessageBox.Show("File name = "+fileName);
                     extractedSourcePath = copy.extractSourcePath(sourceFile, fileName);
-                    //MessageBox.Show("Extracted path from source path "+extractedSourcePath);
 
                     if (Directory.Exists(destinationPath) && Directory.Exists(extractedSourcePath))
                     {
@@ -252,7 +249,13 @@ namespace JustCCP_part_1_view
 
         private void pauseButton_Click(object sender, EventArgs e)
         {
-
+            if(pauseButton.Text == "Pause"){
+               pauseButton.Text = "Resume"; 
+               pauseButton.Width = 93;
+            }else if(pauseButton.Text == "Resume"){
+                pauseButton.Text = "Pause";
+                pauseButton.Width = 80;
+            }
         }
 
         private void label7_Click(object sender, EventArgs e)
