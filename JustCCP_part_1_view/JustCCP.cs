@@ -252,15 +252,34 @@ namespace JustCCP_part_1_view
             if(pauseButton.Text == "Pause"){
                pauseButton.Text = "Resume"; 
                pauseButton.Width = 93;
+               pauseButton.ImageIndex = 8;
             }else if(pauseButton.Text == "Resume"){
                 pauseButton.Text = "Pause";
                 pauseButton.Width = 80;
+                pauseButton.ImageIndex = 0;
             }
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //cut pause button
+        private void buttonPause_Click(object sender, EventArgs e)
+        {
+            if (cutPauseButton.Text == "Pause")
+            {
+                cutPauseButton.Text = "Resume";
+                cutPauseButton.Width = 93;
+                cutPauseButton.ImageIndex = 8;
+            }
+            else if (cutPauseButton.Text == "Resume")
+            {
+                cutPauseButton.Text = "Pause";
+                cutPauseButton.Width = 80;
+                cutPauseButton.ImageIndex = 0;
+            }
         }
     }
 }

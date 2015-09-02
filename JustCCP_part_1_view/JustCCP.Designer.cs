@@ -34,7 +34,7 @@
             this.aboutPage = new System.Windows.Forms.TabPage();
             this.cutPage = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cutPauseButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -70,6 +70,7 @@
             this.imageListButton.Images.SetKeyName(5, "sourcePng.ico");
             this.imageListButton.Images.SetKeyName(6, "destinationPng.ico");
             this.imageListButton.Images.SetKeyName(7, "favicon(1).ico");
+            this.imageListButton.Images.SetKeyName(8, "resumeIcon.ico");
             // 
             // aboutPage
             // 
@@ -87,7 +88,7 @@
             this.cutPage.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cutPage.BackgroundImage = global::JustCCP_part_1_view.Properties.Resources.backgroundImage1;
             this.cutPage.Controls.Add(this.button1);
-            this.cutPage.Controls.Add(this.button2);
+            this.cutPage.Controls.Add(this.cutPauseButton);
             this.cutPage.Controls.Add(this.button3);
             this.cutPage.Controls.Add(this.button4);
             this.cutPage.Controls.Add(this.progressBar1);
@@ -117,20 +118,21 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // cutPauseButton
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.ImageIndex = 0;
-            this.button2.ImageList = this.imageListButton;
-            this.button2.Location = new System.Drawing.Point(102, 198);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 29);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Pause";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
+            this.cutPauseButton.BackColor = System.Drawing.Color.White;
+            this.cutPauseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cutPauseButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cutPauseButton.ImageIndex = 0;
+            this.cutPauseButton.ImageList = this.imageListButton;
+            this.cutPauseButton.Location = new System.Drawing.Point(102, 198);
+            this.cutPauseButton.Name = "cutPauseButton";
+            this.cutPauseButton.Size = new System.Drawing.Size(80, 29);
+            this.cutPauseButton.TabIndex = 23;
+            this.cutPauseButton.Text = "Pause";
+            this.cutPauseButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cutPauseButton.UseVisualStyleBackColor = false;
+            this.cutPauseButton.Click += new System.EventHandler(this.buttonPause_Click);
             // 
             // button3
             // 
@@ -164,7 +166,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 156);
+            this.progressBar1.Location = new System.Drawing.Point(13, 159);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(337, 23);
             this.progressBar1.TabIndex = 20;
@@ -172,7 +174,7 @@
             // progressBar2
             // 
             this.progressBar2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.progressBar2.Location = new System.Drawing.Point(13, 117);
+            this.progressBar2.Location = new System.Drawing.Point(13, 120);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.Size = new System.Drawing.Size(337, 23);
             this.progressBar2.TabIndex = 19;
@@ -308,7 +310,7 @@
             // totalProgressBar
             // 
             this.totalProgressBar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.totalProgressBar.Location = new System.Drawing.Point(13, 156);
+            this.totalProgressBar.Location = new System.Drawing.Point(13, 159);
             this.totalProgressBar.Name = "totalProgressBar";
             this.totalProgressBar.Size = new System.Drawing.Size(337, 23);
             this.totalProgressBar.TabIndex = 11;
@@ -318,7 +320,7 @@
             // 
             this.presentprogressBar.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.presentprogressBar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.presentprogressBar.Location = new System.Drawing.Point(13, 117);
+            this.presentprogressBar.Location = new System.Drawing.Point(13, 120);
             this.presentprogressBar.Name = "presentprogressBar";
             this.presentprogressBar.Size = new System.Drawing.Size(337, 23);
             this.presentprogressBar.TabIndex = 9;
@@ -403,7 +405,7 @@
         private System.Windows.Forms.ImageList imageListButton2;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button cutPauseButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ProgressBar progressBar1;
