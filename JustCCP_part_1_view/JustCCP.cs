@@ -85,116 +85,6 @@ namespace JustCCP_part_1_view
 
         private void copyButton_Click(object sender, EventArgs e)
         {
-            //how many files are there
-            /*int length = filelist.Count;
-            string process;*/
-            //the file name variable
-            /*string file = "";
-            long fileLength = 0;
-            long totalByte = 0;
-            int currentBlockSize = 0;
-            double percentage = 0;
-            long totalFileSize = 0;
-            long presentlyCopied = 0;
-
-            try {
-                for (int i = 0; i<length;i++ )
-                {
-                    process = filelist[i];
-                    FileStream read = new FileStream(process,FileMode.Open,FileAccess.Read);
-                    totalFileSize += read.Length;
-                }
-
-                MessageBox.Show(totalFileSize.ToString());
-
-
-                for (int i = 0; i < length; i++)
-                {
-                    //getting a file path
-                    process = filelist[i];
-                    //making an array from its path
-                    char[] arr = new char[process.Length];
-
-
-                    //this converts the string to character array
-                    StringReader sr = new StringReader(process);
-                    sr.Read(arr, 0, process.Length);
-
-                    //this loop extract the specific file name from the filelist
-                    for (int j = 0; j < arr.Length; j++)
-                    {
-                        if (arr[j].Equals('\\'))
-                        {
-                            file = "";
-                        }
-                        else
-                        {
-                            file += arr[j].ToString();
-                        }
-                    }
-
-                    //assining the file into the fileName
-                    fileName = file;
-
-                    //getting source path
-                    char[] arr2 = new char[process.Length - (fileName.Length + 1)];
-                    StringReader sr2 = new StringReader(process);
-                    sr2.Read(arr2, 0, process.Length - (fileName.Length + 1));
-                    string sourcePath = new string(arr2);
-
-                    //if the directory exists then copy
-                    if (Directory.Exists(destinationPath) && (Directory.Exists(sourcePath)))
-                    {
-                        //copy machanism
-                        destinationFile = Path.Combine(destinationPath, fileName);
-                        sourceFile = process;
-
-                        FileStream source = new FileStream(sourceFile, FileMode.Open, FileAccess.Read);
-                        fileLength = source.Length;
-                        FileStream dest = new FileStream(destinationFile, FileMode.CreateNew, FileAccess.Write);
-
-
-                        //presentlyCopied += fileLength;
-
-
-                        //presentprogressBar.Value = 0;
-                        while ((currentBlockSize = source.Read(buffer, 0, buffer.Length)) > 0)
-                        {
-                            totalByte += currentBlockSize;
-                            //Console.WriteLine("Present block size = " + String.Format("{0:0.00}", (totalByte / 1024)));
-                            percentage = (double)totalByte * 100 / fileLength;
-                            //Console.WriteLine("Pecentage = " + String.Format("{0:0.00}", percentage) + "%");
-                            dest.Write(buffer, 0, buffer.Length);
-                            //Console.Clear();
-                            presentprogressBar.Value = (int)percentage;
-
-                            presentlyCopied += currentBlockSize;
-
-                            percentage = (double)presentlyCopied * 100 / totalFileSize;
-                            totalProgressBar.Value = (int)percentage;
-
-                        }
-
-                        
-
-                        totalByte = 0;
-                        currentBlockSize = 0;
-                        percentage = 0;
-
-                        //MessageBox.Show("done");
-                        presentprogressBar.Value = 0;
-                        dest.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Destination does not exists.");
-                    }
-                }
-                MessageBox.Show("Copy Completed");
-            }catch(Exception exc){
-                MessageBox.Show(exc.Message.ToString());
-            }*/
-
             try {
                 string sourceFile = "";
                 string fileName = "";
@@ -212,11 +102,11 @@ namespace JustCCP_part_1_view
                 for (int i = 0; i < filelist.Count; i++)
                 {
                     sourceFile = filelist[i];
-                    MessageBox.Show("Source Path = "+sourceFile);
+                    //MessageBox.Show("Source Path = "+sourceFile);
                     fileName = copy.extractFileName(sourceFile);
-                    MessageBox.Show("File name = "+fileName);
+                    //MessageBox.Show("File name = "+fileName);
                     extractedSourcePath = copy.extractSourcePath(sourceFile, fileName);
-                    MessageBox.Show("Extracted path from source path "+extractedSourcePath);
+                    //MessageBox.Show("Extracted path from source path "+extractedSourcePath);
 
                     if (Directory.Exists(destinationPath) && Directory.Exists(extractedSourcePath))
                     {
@@ -239,6 +129,10 @@ namespace JustCCP_part_1_view
                             percentage = (double)presentlyCopied * 100 / totalFileSize;
                             totalProgressBar.Value = (int)percentage;
                         }
+
+                        totalByte = 0;
+                        currentBlockSize = 0;
+                        percentage = 0;
 
                         presentprogressBar.Value = 0;
                         destination.Close();
