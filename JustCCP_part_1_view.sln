@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustCCP_part_1_view", "JustCCP_part_1_view\JustCCP_part_1_view.csproj", "{5EB1CC67-F336-41EF-8E87-CFD29C446414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{23C3EB45-A0B8-42A6-B998-821C405B0697}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCPLibrary", "CCPLibrary\CCPLibrary.csproj", "{A8DBB26D-DCF2-4F7E-B098-3C8CE8C48FF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EB1CC67-F336-41EF-8E87-CFD29C446414}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB1CC67-F336-41EF-8E87-CFD29C446414}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB1CC67-F336-41EF-8E87-CFD29C446414}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB1CC67-F336-41EF-8E87-CFD29C446414}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23C3EB45-A0B8-42A6-B998-821C405B0697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C3EB45-A0B8-42A6-B998-821C405B0697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C3EB45-A0B8-42A6-B998-821C405B0697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C3EB45-A0B8-42A6-B998-821C405B0697}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8DBB26D-DCF2-4F7E-B098-3C8CE8C48FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8DBB26D-DCF2-4F7E-B098-3C8CE8C48FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8DBB26D-DCF2-4F7E-B098-3C8CE8C48FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8DBB26D-DCF2-4F7E-B098-3C8CE8C48FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

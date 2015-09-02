@@ -1,0 +1,5 @@
+G:\C# workspace\JustCCP Project\JustCCP_part_4\CCPLibrary\bin\Debug\CCPLibrary.dll
+G:\C# workspace\JustCCP Project\JustCCP_part_4\CCPLibrary\bin\Debug\CCPLibrary.pdb
+G:\C# workspace\JustCCP Project\JustCCP_part_4\CCPLibrary\obj\Debug\CCPLibrary.csprojResolveAssemblyReference.cache
+G:\C# workspace\JustCCP Project\JustCCP_part_4\CCPLibrary\obj\Debug\CCPLibrary.dll
+G:\C# workspace\JustCCP Project\JustCCP_part_4\CCPLibrary\obj\Debug\CCPLibrary.pdb
