@@ -33,15 +33,15 @@
             this.imageListButton = new System.Windows.Forms.ImageList(this.components);
             this.aboutPage = new System.Windows.Forms.TabPage();
             this.cutPage = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cutButton = new System.Windows.Forms.Button();
             this.cutPauseButton = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.button5 = new System.Windows.Forms.Button();
+            this.cutSkipButton = new System.Windows.Forms.Button();
+            this.cutQuitButton = new System.Windows.Forms.Button();
+            this.cutTotalProgressBar = new System.Windows.Forms.ProgressBar();
+            this.cutPresentProgressBar = new System.Windows.Forms.ProgressBar();
+            this.cutDestinationButton = new System.Windows.Forms.Button();
             this.imageListButton3 = new System.Windows.Forms.ImageList(this.components);
-            this.button6 = new System.Windows.Forms.Button();
+            this.cutSourceButton = new System.Windows.Forms.Button();
             this.imageListButton2 = new System.Windows.Forms.ImageList(this.components);
             this.copyPage = new System.Windows.Forms.TabPage();
             this.copyButton = new System.Windows.Forms.Button();
@@ -87,14 +87,14 @@
             // 
             this.cutPage.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cutPage.BackgroundImage = global::JustCCP_part_1_view.Properties.Resources.backgroundImage1;
-            this.cutPage.Controls.Add(this.button1);
+            this.cutPage.Controls.Add(this.cutButton);
             this.cutPage.Controls.Add(this.cutPauseButton);
-            this.cutPage.Controls.Add(this.button3);
-            this.cutPage.Controls.Add(this.button4);
-            this.cutPage.Controls.Add(this.progressBar1);
-            this.cutPage.Controls.Add(this.progressBar2);
-            this.cutPage.Controls.Add(this.button5);
-            this.cutPage.Controls.Add(this.button6);
+            this.cutPage.Controls.Add(this.cutSkipButton);
+            this.cutPage.Controls.Add(this.cutQuitButton);
+            this.cutPage.Controls.Add(this.cutTotalProgressBar);
+            this.cutPage.Controls.Add(this.cutPresentProgressBar);
+            this.cutPage.Controls.Add(this.cutDestinationButton);
+            this.cutPage.Controls.Add(this.cutSourceButton);
             this.cutPage.Location = new System.Drawing.Point(4, 22);
             this.cutPage.Name = "cutPage";
             this.cutPage.Padding = new System.Windows.Forms.Padding(3);
@@ -103,20 +103,21 @@
             this.cutPage.Text = "Cut";
             this.cutPage.Click += new System.EventHandler(this.cutPage_Click);
             // 
-            // button1
+            // cutButton
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.ImageIndex = 2;
-            this.button1.ImageList = this.imageListButton;
-            this.button1.Location = new System.Drawing.Point(13, 198);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(69, 29);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Copy";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
+            this.cutButton.BackColor = System.Drawing.Color.White;
+            this.cutButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cutButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cutButton.ImageIndex = 2;
+            this.cutButton.ImageList = this.imageListButton;
+            this.cutButton.Location = new System.Drawing.Point(23, 198);
+            this.cutButton.Name = "cutButton";
+            this.cutButton.Size = new System.Drawing.Size(60, 29);
+            this.cutButton.TabIndex = 24;
+            this.cutButton.Text = "Cut";
+            this.cutButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cutButton.UseVisualStyleBackColor = false;
+            this.cutButton.Click += new System.EventHandler(this.cutButton_Click);
             // 
             // cutPauseButton
             // 
@@ -134,65 +135,69 @@
             this.cutPauseButton.UseVisualStyleBackColor = false;
             this.cutPauseButton.Click += new System.EventHandler(this.buttonPause_Click);
             // 
-            // button3
+            // cutSkipButton
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageIndex = 4;
-            this.button3.ImageList = this.imageListButton;
-            this.button3.Location = new System.Drawing.Point(200, 198);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(68, 29);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Skip";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
+            this.cutSkipButton.BackColor = System.Drawing.Color.White;
+            this.cutSkipButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cutSkipButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cutSkipButton.ImageIndex = 4;
+            this.cutSkipButton.ImageList = this.imageListButton;
+            this.cutSkipButton.Location = new System.Drawing.Point(200, 198);
+            this.cutSkipButton.Name = "cutSkipButton";
+            this.cutSkipButton.Size = new System.Drawing.Size(68, 29);
+            this.cutSkipButton.TabIndex = 22;
+            this.cutSkipButton.Text = "Skip";
+            this.cutSkipButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cutSkipButton.UseVisualStyleBackColor = false;
+            this.cutSkipButton.Click += new System.EventHandler(this.cutSkipButton_Click);
             // 
-            // button4
+            // cutQuitButton
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.ImageIndex = 3;
-            this.button4.ImageList = this.imageListButton;
-            this.button4.Location = new System.Drawing.Point(285, 198);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(65, 29);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Quit";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
+            this.cutQuitButton.BackColor = System.Drawing.Color.White;
+            this.cutQuitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cutQuitButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cutQuitButton.ImageIndex = 3;
+            this.cutQuitButton.ImageList = this.imageListButton;
+            this.cutQuitButton.Location = new System.Drawing.Point(285, 198);
+            this.cutQuitButton.Name = "cutQuitButton";
+            this.cutQuitButton.Size = new System.Drawing.Size(65, 29);
+            this.cutQuitButton.TabIndex = 21;
+            this.cutQuitButton.Text = "Quit";
+            this.cutQuitButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cutQuitButton.UseVisualStyleBackColor = false;
+            this.cutQuitButton.Click += new System.EventHandler(this.cutQuitButton_Click);
+            this.cutQuitButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cutQuitButton_KeyDown);
             // 
-            // progressBar1
+            // cutTotalProgressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(13, 159);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(337, 23);
-            this.progressBar1.TabIndex = 20;
+            this.cutTotalProgressBar.Location = new System.Drawing.Point(13, 159);
+            this.cutTotalProgressBar.Name = "cutTotalProgressBar";
+            this.cutTotalProgressBar.Size = new System.Drawing.Size(337, 23);
+            this.cutTotalProgressBar.TabIndex = 20;
             // 
-            // progressBar2
+            // cutPresentProgressBar
             // 
-            this.progressBar2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.progressBar2.Location = new System.Drawing.Point(13, 120);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(337, 23);
-            this.progressBar2.TabIndex = 19;
+            this.cutPresentProgressBar.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cutPresentProgressBar.Location = new System.Drawing.Point(13, 120);
+            this.cutPresentProgressBar.Name = "cutPresentProgressBar";
+            this.cutPresentProgressBar.Size = new System.Drawing.Size(337, 23);
+            this.cutPresentProgressBar.TabIndex = 19;
             // 
-            // button5
+            // cutDestinationButton
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.ImageIndex = 1;
-            this.button5.ImageList = this.imageListButton3;
-            this.button5.Location = new System.Drawing.Point(194, 16);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(156, 91);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Destination";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = false;
+            this.cutDestinationButton.BackColor = System.Drawing.Color.White;
+            this.cutDestinationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cutDestinationButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cutDestinationButton.ImageIndex = 1;
+            this.cutDestinationButton.ImageList = this.imageListButton3;
+            this.cutDestinationButton.Location = new System.Drawing.Point(194, 16);
+            this.cutDestinationButton.Name = "cutDestinationButton";
+            this.cutDestinationButton.Size = new System.Drawing.Size(156, 91);
+            this.cutDestinationButton.TabIndex = 18;
+            this.cutDestinationButton.Text = "Destination";
+            this.cutDestinationButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cutDestinationButton.UseVisualStyleBackColor = false;
+            this.cutDestinationButton.Click += new System.EventHandler(this.cutDestinationButton_Click);
             // 
             // imageListButton3
             // 
@@ -201,20 +206,21 @@
             this.imageListButton3.Images.SetKeyName(0, "DestinationIconHign.ico");
             this.imageListButton3.Images.SetKeyName(1, "DestinationIconHigh2.ico");
             // 
-            // button6
+            // cutSourceButton
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.ImageIndex = 1;
-            this.button6.ImageList = this.imageListButton2;
-            this.button6.Location = new System.Drawing.Point(13, 15);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(147, 91);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Source";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = false;
+            this.cutSourceButton.BackColor = System.Drawing.Color.White;
+            this.cutSourceButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cutSourceButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.cutSourceButton.ImageIndex = 1;
+            this.cutSourceButton.ImageList = this.imageListButton2;
+            this.cutSourceButton.Location = new System.Drawing.Point(13, 15);
+            this.cutSourceButton.Name = "cutSourceButton";
+            this.cutSourceButton.Size = new System.Drawing.Size(147, 91);
+            this.cutSourceButton.TabIndex = 17;
+            this.cutSourceButton.Text = "Source";
+            this.cutSourceButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.cutSourceButton.UseVisualStyleBackColor = false;
+            this.cutSourceButton.Click += new System.EventHandler(this.cutSourceButton_Click);
             // 
             // imageListButton2
             // 
@@ -380,6 +386,9 @@
             this.MaximizeBox = false;
             this.Name = "JustCCP";
             this.Text = "JustCCP";
+            this.Load += new System.EventHandler(this.JustCCP_Load_1);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.JustCCP_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustCCP_KeyPress);
             this.cutPage.ResumeLayout(false);
             this.copyPage.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
@@ -404,14 +413,14 @@
         private System.Windows.Forms.Button sourceButton;
         private System.Windows.Forms.ImageList imageListButton2;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cutButton;
         private System.Windows.Forms.Button cutPauseButton;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button cutSkipButton;
+        private System.Windows.Forms.Button cutQuitButton;
+        private System.Windows.Forms.ProgressBar cutTotalProgressBar;
+        private System.Windows.Forms.ProgressBar cutPresentProgressBar;
+        private System.Windows.Forms.Button cutDestinationButton;
+        private System.Windows.Forms.Button cutSourceButton;
 
     }
 }
